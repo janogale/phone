@@ -1,0 +1,239 @@
+/* 
+author: Mukhtar Janagale
+Date: Jan 22 2020
+for: Elmi Academy JS2020 class
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2f2f2f;
+}
+
+body {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.phone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  width: 250px;
+  z-index: 2;
+  border: 12px solid var(--primary-color);
+  border-radius: 25px;
+}
+
+.phone:before {
+  content: "";
+  top: -12px;
+  bottom: -12px;
+  right: -12px;
+  left: -12px;
+  z-index: -1;
+  display: block;
+  position: absolute;
+  border: 3px solid #aaa9ad;
+  border-radius: 25px;
+  background: transparent;
+}
+
+.phone:after {
+  content: " ";
+  width: 150px;
+  height: 13px;
+  margin: 0 auto;
+  background: var(--primary-color);
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.mic {
+  position: absolute;
+  background: #535252;
+  border-radius: 2px;
+  height: 5px;
+  width: 50px;
+  left: 35%;
+}
+
+.camera {
+  position: absolute;
+  background: #696969;
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+  left: 65%;
+}
+
+.camera-eye {
+  position: absolute;
+  background: #908f8d;
+  top: 2px;
+  left: 66%;
+  border-radius: 2.5px;
+  height: 6px;
+  width: 6px;
+}
+
+.camera-eye:after {
+  content: "";
+  position: absolute;
+  background: rgb(190, 190, 190);
+  border-radius: 1px;
+  left: 2px;
+  top: 2px;
+  height: 2px;
+  width: 2px;
+}
+
+.time {
+  font-size: 0.66em;
+  position: absolute;
+  font-weight: bold;
+  top: 5px;
+  left: 5px;
+}
+
+.battery {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  background: var(--primary-color);
+  width: 15px;
+  height: 8px;
+}
+
+.battery:before {
+  content: "";
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  border: 0.01em solid #ffffff;
+}
+
+.battery:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -2px;
+  background: var(--primary-color);
+  height: 4px;
+  width: 3px;
+}
+
+.screen {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 25px;
+  left: 13px;
+  width: 200px;
+  height: 100px;
+}
+
+.screen span {
+  font-size: 2.2em;
+  font-weight: bolder;
+  color: #00a2e2;
+}
+
+.keyboard {
+  position: absolute;
+  width: 90%;
+  top: 130px;
+  left: 13px;
+  display: flex;
+  flex-direction: column;
+}
+
+.keyboard section {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.keyboard button {
+  position: relative;
+  font-size: 1.5em;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 25px;
+  margin: auto;
+  transition: all ease-in-out 0.5s;
+}
+.keyboard button span {
+  position: absolute;
+  bottom: 3px;
+  left: 16px;
+  font-size: 0.2em;
+  font-weight: bold;
+}
+
+.keyboard button:hover {
+  cursor: pointer;
+  background: #908f8d;
+  color: #fff;
+}
+
+.call {
+  background: rgb(71, 190, 71);
+}
+
+.key .call:hover {
+  background: forestgreen;
+}
+
+.call img {
+  width: 20px;
+  height: 20px;
+}
+
+.divider {
+  margin-top: 20px;
+  margin-bottom: -20px;
+  background: var(--primary-color);
+}
+
+/* footer */
+.footer {
+  position: relative;
+  bottom: -20px;
+}
+
+.footer button {
+  width: 18%;
+  background: transparent;
+}
+
+.footer button:hover {
+  background: transparent;
+  color: #00a2e2;
+  font-weight: bolder;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+}
+
+.footer button span {
+  position: absolute;
+  bottom: 3px;
+  left: 5px;
+  font-size: 0.2em;
+  font-weight: bold;
+}
